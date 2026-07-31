@@ -5,6 +5,7 @@ import Stats from "@/components/sections/Stats";
 import Programs from "@/components/sections/Programs";
 import WhyUs from "@/components/sections/WhyUs";
 import Vision from "@/components/sections/Vision";
+import FacultySlider from "@/components/sections/FacultySlider";
 import ClinicalPartners from "@/components/sections/ClinicalPartners";
 import Gallery from "@/components/sections/Gallery";
 import News from "@/components/sections/News";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Programs />
       <WhyUs />
       <Vision />
+      <FacultySlider />
       <ClinicalPartners />
       <Gallery />
       <News />

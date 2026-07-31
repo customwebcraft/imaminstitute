@@ -15,6 +15,16 @@ export const institute = {
   googleMap: "https://maps.app.goo.gl/R4bGzRdP163MaZs26",
 };
 
+export type FacultyMember = {
+  id: string;
+  name: string;
+  role: string;
+  department: "leadership" | "faculty" | "administration";
+  photo: string;
+  quote?: string;
+  message?: string;
+};
+
 export const stats = [
   { value: 500, suffix: "+", label: "Students Enrolled" },
   { value: 15, suffix: "+", label: "Qualified Faculty" },
@@ -23,7 +33,7 @@ export const stats = [
 ];
 
 export const accreditations = [
-  { label: "Registered with PNMC", logo: "/logos/pnmc.svg" },
+  { label: "Registered with PNMC", logo: "/logos/pnmc.png" },
   { label: "Affiliated with SMBBMU", logo: "/logos/smbbmu.png" },
   { label: "Approved by Govt. of Sindh", logo: "/logos/sindh-govt.png" },
   { label: "Imam Institute Certified", logo: "/logos/imam-cert.png" },
@@ -114,11 +124,116 @@ export const hospitals = [
     location: "Jacobabad",
     desc: "Major public teaching hospital offering unparalleled community and emergency nursing experience.",
   },
+  {
+    number: "04",
+    name: "GMMMC",
+    fullName: "Ghulam Muhammad Mahar Medical College",
+    location: "Sukkur",
+    desc: "House Job Opportunities available at GMMMC for Imam Institute graduates — expanding career pathways for our nursing professionals.",
+    badge: "House Job Opportunities",
+  },
+];
+
+export const facultyMembers: FacultyMember[] = [
+  {
+    id: "abid-hussain-soomro",
+    name: "Mr. Abid Hussain Soomro",
+    role: "Chief Executive Officer",
+    department: "leadership",
+    photo: "/images/faculty/ceo.jpg",
+    quote: "Every aspiring healthcare professional deserves the opportunity to learn, grow, and succeed.",
+    message: `At Imam Institute of Nursing & Allied Health Sciences, our vision has always been to make quality nursing education accessible to the youth of Jacobabad and surrounding communities. Since our establishment in 2019, we have been committed to empowering students with knowledge, practical skills, and professional values that prepare them to serve society with compassion and excellence.
+
+We believe that every aspiring healthcare professional deserves the opportunity to learn, grow, and succeed. Through quality education and clinical training, we are proud to shape the next generation of competent and caring nurses who will contribute to a healthier Pakistan.`,
+  },
+  {
+    id: "shahid-hussain-soomro",
+    name: "Mr. Shahid Hussain Soomro",
+    role: "Additional Director",
+    department: "leadership",
+    photo: "/images/faculty/additional-director.jpg",
+    quote: "Today's students are tomorrow's healthcare leaders.",
+    message: `At Imam Institute of Nursing & Allied Health Sciences we are dedicated to creating an environment where students can achieve academic excellence while developing the skills, confidence, and compassion required in the nursing profession. Our commitment is to provide quality education, modern clinical training, and continuous support that prepares every student for a successful healthcare career.
+
+We believe that today's students are tomorrow's healthcare leaders, and we remain committed to guiding them towards professional excellence and lifelong learning.`,
+  },
+  {
+    id: "zahid-abbasi",
+    name: "Sir Zahid Abbasi",
+    role: "Clinical Instructor",
+    department: "faculty",
+    photo: "/images/faculty/clinical-instructor.jpg",
+    quote: "Clinical excellence begins with compassionate care.",
+  },
+  {
+    id: "faiz-muhammad",
+    name: "Sir Faiz Muhammad",
+    role: "Nursing Instructor",
+    department: "faculty",
+    photo: "/images/faculty/nursing-instructor.jpg",
+    quote: "Every patient deserves a skilled and caring nurse.",
+  },
+  {
+    id: "sadia-mushtaque",
+    name: "Miss Sadia Mushtaque",
+    role: "Nursing Lecturer",
+    department: "faculty",
+    photo: "/images/faculty/nursing-lecturer.jpg",
+    quote: "Education is the foundation of every great nurse.",
+  },
+  {
+    id: "shakeel-pathan",
+    name: "Sir Shakeel Pathan",
+    role: "General Subjects Teacher",
+    department: "faculty",
+    photo: "/images/faculty/general-subjects-teacher.jpg",
+    quote: "A strong academic foundation opens every door.",
+  },
+  {
+    id: "aisha",
+    name: "Miss Aisha",
+    role: "Senior Nursing Instructor",
+    department: "faculty",
+    photo: "/images/faculty/senior-nursing-instructor.jpg",
+    quote: "Nursing is both an art and a science.",
+  },
+  {
+    id: "mir-mansab",
+    name: "Sir Mir Mansab",
+    role: "Senior Nursing Lecturer",
+    department: "faculty",
+    photo: "/images/faculty/senior-nursing-lecturer.jpg",
+    quote: "We shape nurses who transform communities.",
+  },
+  {
+    id: "waqar-ahmed-soomro",
+    name: "Mr. Waqar Ahmed Soomro",
+    role: "Nursing Lecturer",
+    department: "faculty",
+    photo: "/images/faculty/nursing-lecturer-waqar-ahmed.jpg",
+    quote: "Clinical knowledge with human empathy — that is nursing.",
+  },
+  {
+    id: "ali-nawaz-hisbani",
+    name: "Mr. Ali Nawaz Hisbani",
+    role: "Vice Principal",
+    department: "administration",
+    photo: "/images/faculty/vice-principal.jpg",
+    quote: "A well-managed institute creates space for great learning.",
+  },
+  {
+    id: "mumtaz-kanasor",
+    name: "Mr. Mumtaz Kanasor",
+    role: "Administrator",
+    department: "administration",
+    photo: "/images/faculty/administrator.jpg",
+    quote: "Serving the institute is serving the future of healthcare.",
+  },
 ];
 
 export const trustBadges = [
   { label: "Government Approved", sublabel: "Govt. of Sindh", icon: "ShieldCheck", logo: "/logos/sindh-govt.png" },
-  { label: "PNMC Registered", sublabel: "Pakistan Nursing Council", icon: "Award", logo: "/logos/pnmc.svg" },
+  { label: "PNMC Registered", sublabel: "Pakistan Nursing Council", icon: "Award", logo: "/logos/pnmc.png" },
   { label: "SMBBMU Affiliated", sublabel: "University Affiliated", icon: "Building2", logo: "/logos/smbbmu.png" },
 ];
 

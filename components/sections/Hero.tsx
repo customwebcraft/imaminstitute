@@ -74,7 +74,7 @@ export default function Hero() {
 
       <div
         className="hero-bg-pulse absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full pointer-events-none z-[2]"
-        style={{ background: "radial-gradient(circle, rgba(27,58,122,0.4) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, transparent 70%)" }}
         aria-hidden="true"
       />
 
@@ -99,7 +99,7 @@ export default function Hero() {
       {/* Radial gradient overlay */}
       <div className="absolute inset-0 pointer-events-none z-[1]"
         style={{
-          background: "radial-gradient(ellipse 80% 80% at 20% 50%, #1B3A7A22 0%, transparent 70%)"
+          background: "radial-gradient(ellipse 80% 80% at 20% 50%, rgba(37, 99, 235, 0.14) 0%, transparent 70%)"
         }}
       />
 
