@@ -17,7 +17,7 @@ export default function AccreditationBar() {
                   <span className="text-xs font-bold uppercase tracking-wide text-ink">PNMC</span>
                 )}
               </div>
-              <span className="text-sm font-medium text-ink">{item.label}</span>
+              <span className="text-sm font-medium text-navy">{item.label}</span>
             </div>
           ))}
         </div>

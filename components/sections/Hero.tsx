@@ -51,7 +51,7 @@ export default function Hero() {
   const imageY = useTransform(rawY, [0, 500], [0, -60]);
 
   return (
-    <section className="relative min-h-screen bg-navy-deep text-white overflow-hidden flex items-center">
+    <section className="relative min-h-screen bg-navy text-white overflow-hidden flex items-center pt-28 md:pt-32">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/campus-group.jpg"
@@ -59,11 +59,11 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-25"
+          className="object-cover object-center opacity-40"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/80 to-navy-deep/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-navy-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/65 to-navy-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/20" />
       </div>
 
       <div

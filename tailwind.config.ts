@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "navy-deep":   "#1a3fa3",
-        "navy":        "#2563EB",
-        "navy-mid":    "#3B82F6",
+        "navy-deep":   "#163d80",
+        "navy":        "#1E4FA0",
+        "navy-mid":    "#2952A3",
         "navy-light":  "#EFF6FF",
         "crimson":     "#C0392B",
         "crimson-dark":"#9B2C1F",
