@@ -46,61 +46,10 @@ export default function Nav() {
               <Image
                 src="/logos/imam-logo.png"
                 alt="Imam Institute Logo"
-                width={96}
-                height={96}
-                className="object-contain flex-shrink-0 h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24"
+                width={128}
+                height={128}
+                className="object-contain flex-shrink-0 h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32"
               />
-              <div className="flex lg:hidden flex-col justify-center leading-none">
-                <span
-                  className="font-bold tracking-wide"
-                  style={{
-                    fontSize: "15px",
-                    color: "#1B3A7A",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    letterSpacing: "0.04em",
-                    lineHeight: 1.1,
-                  }}
-                >
-                  IMAM INSTITUTE
-                </span>
-
-                <div
-                  style={{
-                    height: "1.5px",
-                    backgroundColor: "#C0392B",
-                    marginTop: "3px",
-                    marginBottom: "3px",
-                    width: "100%",
-                  }}
-                />
-
-                <span
-                  style={{
-                    fontSize: "8.5px",
-                    color: "#1B3A7A",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontWeight: 400,
-                    letterSpacing: "0.06em",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  OF NURSING AND ALLIED HEALTH SCIENCES
-                </span>
-
-                <span
-                  style={{
-                    fontSize: "9px",
-                    color: "#C0392B",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    marginTop: "1px",
-                    lineHeight: 1,
-                  }}
-                >
-                  JACOBABAD
-                </span>
-              </div>
             </Link>
 
             <nav className="hidden md:flex items-center gap-8">
