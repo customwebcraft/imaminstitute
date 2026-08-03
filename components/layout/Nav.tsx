@@ -42,12 +42,12 @@ export default function Nav() {
         <header className="bg-white border-b border-gray-200 shadow-sm">
           <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <Link href="/" className="flex items-center gap-4 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-3 flex-shrink-0">
               <Image
                 src="/logos/imam-logo.png"
                 alt="Imam Institute Logo"
-                width={80}
-                height={80}
+                width={64}
+                height={64}
                 className="object-contain flex-shrink-0"
               />
               <div className="hidden lg:flex flex-col justify-center leading-none">
