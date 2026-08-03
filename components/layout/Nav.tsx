@@ -46,11 +46,11 @@ export default function Nav() {
               <Image
                 src="/logos/imam-logo.png"
                 alt="Imam Institute Logo"
-                width={64}
-                height={64}
-                className="object-contain flex-shrink-0"
+                width={96}
+                height={96}
+                className="object-contain flex-shrink-0 h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24"
               />
-              <div className="hidden lg:flex flex-col justify-center leading-none">
+              <div className="flex lg:hidden flex-col justify-center leading-none">
                 <span
                   className="font-bold tracking-wide"
                   style={{
