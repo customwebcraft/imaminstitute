@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { galleryItems } from "@/lib/data";
+import GalleryExperience from "@/components/gallery/GalleryExperience";
+
+const galleryImages = Array.from({ length: 10 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
 
 export const metadata = {
   title: "Gallery | Imam Institute",
@@ -16,17 +18,22 @@ export default function GalleryPage() {
           <p className="mt-4 max-w-3xl text-base leading-8 text-ink-muted">A visual tour of academic, clinical, and student life at the institute.</p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {galleryItems.map((item) => (
-            <div key={item.id} className="group overflow-hidden rounded-[1.75rem] bg-navy-light">
-              <div className="relative aspect-[4/5] overflow-hidden transition duration-500 group-hover:scale-[1.03]">
-                <Image src={item.src} alt={item.alt} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
-              </div>
-              <div className="p-6">
-                <p className="text-sm font-semibold text-navy">{item.alt}</p>
-              </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {galleryImages.map((src, index) => (
+            <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-navy-light">
+              <Image
+                src={src}
+                alt={`Imam Institute campus gallery image ${index + 1}`}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition duration-500 hover:scale-[1.03]"
+              />
             </div>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <GalleryExperience mode="media" />
         </div>
       </div>
     </section>

@@ -4,14 +4,28 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { Menu, X, MessageCircle, Phone, Mail, Clock } from "lucide-react";
+import { Menu, X, MessageCircle, Phone, Mail, Clock, ChevronDown } from "lucide-react";
 
 const navLinks = [
-  { label: "About",      href: "/about" },
+  { label: "About",      href: "/about", children: [
+    { label: "Chairman's Message", href: "/chairman-message" },
+    { label: "Why Choose Us?", href: "/why-choose-us" },
+    { label: "Approvals & Accreditations", href: "/approvals" },
+  ] },
   { label: "Programs",   href: "/programs" },
-  { label: "Admissions", href: "/admissions" },
+  { label: "Admissions", href: "/admissions", children: [
+    { label: "Admissions 2026–27", href: "/admissions/2026-27" },
+  ] },
+  { label: "Clinical Affiliations", href: "/clinical-affiliations" },
   { label: "Faculty",    href: "/faculty" },
+  { label: "Campus Life", href: "/campus-life" },
+  { label: "Success Stories", href: "/success-stories" },
+  { label: "News & Events", href: "/news" },
+  { label: "Achievements", href: "/achievements" },
   { label: "Gallery",    href: "/gallery" },
+  { label: "Scholarships", href: "/scholarships" },
+  { label: "Downloads", href: "/downloads" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact",    href: "/contact" },
 ];
 
@@ -52,15 +66,23 @@ export default function Nav() {
               />
             </Link>
 
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-3 xl:gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-ink hover:text-navy transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="group relative">
+                  <Link href={link.href} className="flex items-center gap-1 whitespace-nowrap text-xs font-medium text-ink transition-colors hover:text-navy xl:text-sm">
+                    {link.label}
+                    {link.children && <ChevronDown size={13} aria-hidden="true" />}
+                  </Link>
+                  {link.children && (
+                    <div className="invisible absolute left-0 top-full z-50 w-64 translate-y-2 rounded-md border border-border bg-white p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                      {link.children.map((child) => (
+                        <Link key={child.href} href={child.href} className="block rounded px-3 py-2 text-sm text-ink transition hover:bg-navy-light hover:text-navy">
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </nav>
 
@@ -116,13 +138,14 @@ export default function Nav() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block text-ink text-xl font-medium py-3 border-b border-gray-100 hover:text-crimson transition-colors"
-                  >
+                  <Link href={link.href} onClick={() => setMenuOpen(false)} className="block border-b border-gray-100 py-3 text-xl font-medium text-ink transition-colors hover:text-crimson">
                     {link.label}
                   </Link>
+                  {link.children?.map((child) => (
+                    <Link key={child.href} href={child.href} onClick={() => setMenuOpen(false)} className="block border-b border-gray-100 py-2 pl-4 text-sm text-ink-muted transition-colors hover:text-crimson">
+                      {child.label}
+                    </Link>
+                  ))}
                 </motion.div>
               ))}
               <div className="mt-6 flex flex-col gap-3">

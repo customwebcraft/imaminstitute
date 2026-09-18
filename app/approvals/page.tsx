@@ -1,0 +1,6 @@
+import Image from "next/image";
+import { accreditations } from "@/lib/data";
+
+export const metadata = { title: "Approvals & Accreditations | Imam Institute", description: "Learn about the approvals, registrations, and affiliations held by Imam Institute." };
+
+export default function ApprovalsPage() { return <section className="bg-white"><div className="mx-auto max-w-7xl px-6 py-24 md:px-10"><p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">Trust and recognition</p><h1 className="mt-4 text-5xl font-semibold tracking-[-0.03em] text-navy text-display">Approvals & Accreditations</h1><p className="mt-4 max-w-3xl text-base leading-8 text-ink-muted">Imam Institute operates with the recognition and institutional partnerships that support a credible nursing education.</p><div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{accreditations.slice(0, 3).map((item) => <article key={item.logo} className="flex min-h-64 flex-col items-center justify-center rounded-[1.75rem] border border-border bg-off-white p-8 text-center"><div className="relative h-24 w-32"><Image src={item.logo} alt={item.label} fill sizes="128px" className="object-contain" /></div><h2 className="mt-6 text-lg font-semibold leading-7 text-navy">{item.label}</h2></article>)}</div></div></section>; }

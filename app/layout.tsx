@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}>
-      <body className={`${playfair.variable} ${dmSans.variable} font-dm antialiased bg-white text-ink`}>
+      <body suppressHydrationWarning className={`${playfair.variable} ${dmSans.variable} font-dm antialiased bg-white text-ink`}>
         <Nav />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />

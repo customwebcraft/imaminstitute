@@ -1,5 +1,42 @@
-import Link from "next/link";
-import { newsItems } from "@/lib/data";
+import Image from "next/image";
+
+const announcements = [
+  {
+    image: "/images/announcements/announcement-1.jpg",
+    date: "Student Welcome",
+    category: "Orientation",
+    title: "Welcome to the New BS Nursing Batch",
+    description: "Imam Institute welcomes new BS Nursing students with an Orientation Day and White Coat Ceremony.",
+  },
+  {
+    image: "/images/announcements/announcement-2.jpg",
+    date: "Career Opportunity",
+    category: "Hiring",
+    title: "Principal Position Open",
+    description: "Imam Institute is seeking a qualified male or female Principal with an MSN and relevant professional experience.",
+  },
+  {
+    image: "/images/announcements/announcement-3.jpg",
+    date: "Admissions Update",
+    category: "Entry Test",
+    title: "BS Nursing Entry Test",
+    description: "Applicants and parents are invited to the BS Nursing Generic entry test at Imam Institute.",
+  },
+  {
+    image: "/images/announcements/announcement-4.jpg",
+    date: "Admissions Open",
+    category: "Paramedical",
+    title: "Free Admissions at Imam Paramedical Institute",
+    description: "Explore nationally recognized paramedical certification programs, including technician and healthcare specializations.",
+  },
+  {
+    image: "/images/announcements/announcement-5.jpg",
+    date: "Research & Innovation",
+    category: "Research 2026",
+    title: "Participating in Research Program 2026",
+    description: "Imam Institute is empowering future healthcare professionals through research and innovation.",
+  },
+];
 
 export const metadata = {
   title: "News | Imam Institute",
@@ -17,13 +54,18 @@ export default function NewsPage() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {newsItems.map((item) => (
-            <Link key={item.title} href={item.href} className="rounded-[1.75rem] border border-border bg-navy-light p-6 transition hover:border-crimson/30 hover:shadow-lg">
-              <p className="text-sm uppercase tracking-[0.2em] text-ink-muted">{item.date}</p>
-              <h2 className="mt-3 text-2xl font-semibold text-navy">{item.title}</h2>
+          {announcements.map((item) => (
+            <article key={item.image} className="rounded-[1.75rem] border border-border bg-navy-light p-6 transition hover:border-crimson/30 hover:shadow-lg">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] bg-white">
+                <Image src={item.image} alt={item.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
+              </div>
+              <div className="mt-6 flex items-center justify-between gap-3 text-sm text-ink-muted">
+                <span>{item.date}</span>
+                <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white">{item.category}</span>
+              </div>
+              <h2 className="mt-4 text-2xl font-semibold text-navy">{item.title}</h2>
               <p className="mt-4 text-sm leading-7 text-ink-muted">{item.description}</p>
-              <p className="mt-6 text-sm font-semibold text-crimson">Read More →</p>
-            </Link>
+            </article>
           ))}
         </div>
       </div>

@@ -1,44 +1,12 @@
-import Link from "next/link";
 import FadeUp from "@/components/motion/FadeUp";
-import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
+import GalleryExperience from "@/components/gallery/GalleryExperience";
 
 export default function Gallery() {
   return (
-    <section className="overflow-hidden bg-off-white py-24">
-      <div className="mx-auto mb-12 max-w-7xl px-6 md:px-10">
-        <FadeUp>
-          <p className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-crimson">
-            <span className="inline-block h-px w-6 bg-crimson" />
-            Campus Life
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.1}>
-          <div className="flex items-end justify-between">
-            <h2 className="font-playfair text-4xl font-bold leading-tight text-navy md:text-5xl">
-              Life at Imam Institute
-            </h2>
-            <Link
-              href="/gallery"
-              className="hidden items-center gap-2 text-sm font-medium text-navy transition-colors hover:text-crimson md:inline-flex"
-            >
-              View Full Gallery
-              <span className="text-crimson">→</span>
-            </Link>
-          </div>
-        </FadeUp>
-      </div>
-
+    <section className="overflow-hidden bg-off-white py-16 md:py-20">
       <FadeUp delay={0.2}>
-        <div className="from-off-white">
-          <ImageAutoSlider />
-        </div>
+        <GalleryExperience mode="carousel" />
       </FadeUp>
-
-      <div className="mx-auto mt-8 max-w-7xl px-6 md:hidden md:px-10">
-        <Link href="/gallery" className="inline-flex items-center gap-2 text-sm font-medium text-navy transition-colors hover:text-crimson">
-          View Full Gallery <span className="text-crimson">→</span>
-        </Link>
-      </div>
     </section>
   );
 }

@@ -5,10 +5,22 @@ import { institute } from "@/lib/data";
 
 const quickLinks = [
   { href: "/about", label: "About" },
+  { href: "/chairman-message", label: "Chairman's Message" },
+  { href: "/why-choose-us", label: "Why Choose Us?" },
   { href: "/programs", label: "Programs" },
   { href: "/faculty", label: "Faculty" },
   { href: "/admissions", label: "Admissions" },
+  { href: "/admissions/2026-27", label: "Admissions 2026–27" },
+  { href: "/clinical-affiliations", label: "Clinical Affiliations" },
+  { href: "/campus-life", label: "Campus Life" },
+  { href: "/success-stories", label: "Success Stories" },
+  { href: "/news", label: "News & Events" },
+  { href: "/achievements", label: "Achievements" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/approvals", label: "Approvals" },
+  { href: "/scholarships", label: "Scholarships" },
+  { href: "/downloads", label: "Downloads" },
+  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="md:col-span-2">
           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">Quick Links</h3>
           <ul className="mt-5 space-y-3 text-sm text-white/70">
             {quickLinks.map((link) => (
