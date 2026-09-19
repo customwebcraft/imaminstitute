@@ -40,7 +40,7 @@ export default function AdmissionsPage() {
           </div>
           <div>
             <h2 className="text-xl font-semibold text-navy">How to Apply</h2>
-            <p className="mt-4 text-sm leading-7 text-ink-muted">Complete the enquiry form and our admissions team will contact you with the next steps for the BS Nursing program.</p>
+            <p className="mt-4 text-sm leading-7 text-ink-muted">For admission enquiries, contact us on WhatsApp and visit the Admission Office on campus with your required documents.</p>
             <Link href="/admissions/apply" className="mt-6 inline-flex rounded-sm bg-crimson px-6 py-3 text-sm font-semibold text-white transition hover:bg-crimson-dark">
               Apply Now
             </Link>
