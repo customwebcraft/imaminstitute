@@ -24,6 +24,16 @@ export default function TrustBar() {
             </div>
           ))}
         </div>
+        <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Proud Education Partner</p>
+            <p className="mt-3 text-lg font-semibold text-white">TCF Alumni Pathways</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Scholarships</p>
+            <p className="mt-3 text-lg font-semibold text-white">PEEF &amp; Need-Based Merit Scholarships Available</p>
+          </div>
+        </div>
       </div>
     </section>
   );

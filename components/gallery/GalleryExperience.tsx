@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryImages = Array.from({ length: 10 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
@@ -22,29 +23,20 @@ export default function GalleryExperience({ mode = "all" }: { mode?: "all" | "ca
     goToSlide((activeSlide + direction + galleryImages.length) % galleryImages.length);
   };
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveSlide((current) => {
-        const next = (current + 1) % galleryImages.length;
-        sliderRef.current?.children[next]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
-        return next;
-      });
-    }, 5000);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
   return (
     <div className="mx-auto max-w-7xl space-y-16 px-6 md:px-10">
       {(mode === "all" || mode === "carousel") && <section className="!py-0" aria-labelledby="photo-gallery-heading">
-        <div className="mb-8 flex items-end justify-between gap-4">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">A closer look</p>
             <h2 id="photo-gallery-heading" className="mt-3 text-4xl font-semibold text-navy text-display">Life on campus</h2>
           </div>
-          <div className="hidden gap-2 sm:flex">
+          <div className="flex items-center gap-3">
+            <Link href="/gallery" className="text-sm font-semibold text-crimson transition hover:text-navy">View full gallery <span aria-hidden="true">→</span></Link>
+            <div className="hidden gap-2 sm:flex">
             <button type="button" onClick={() => moveSlide(-1)} className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition hover:border-crimson hover:text-crimson" aria-label="Previous gallery image"><ChevronLeft size={18} /></button>
             <button type="button" onClick={() => moveSlide(1)} className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition hover:border-crimson hover:text-crimson" aria-label="Next gallery image"><ChevronRight size={18} /></button>
+            </div>
           </div>
         </div>
         <div ref={sliderRef} className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

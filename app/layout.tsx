@@ -4,6 +4,8 @@ import "./globals.css";
 
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import ScrollManager from "@/components/layout/ScrollManager";
+import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -34,8 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}>
       <body suppressHydrationWarning className={`${playfair.variable} ${dmSans.variable} font-dm antialiased bg-white text-ink`}>
         <Nav />
+        <ScrollManager />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

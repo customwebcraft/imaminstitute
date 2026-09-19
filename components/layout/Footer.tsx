@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Youtube, Phone, AtSign, MapPin } from "lucide-react";
+import { Facebook, Phone, AtSign, MapPin, Music2 } from "lucide-react";
 import { institute } from "@/lib/data";
 
 const quickLinks = [
@@ -49,11 +49,11 @@ export default function Footer() {
             <a href={`tel:${institute.phone}`} className="inline-flex items-center gap-2 hover:text-white"><Phone size={16} /> {institute.phone}</a>
             <a href={`mailto:${institute.email}`} className="inline-flex items-center gap-2 hover:text-white"><AtSign size={16} /> {institute.email}</a>
             <a href={institute.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-white"><Facebook size={16} /> Facebook</a>
-            <div className="inline-flex items-start gap-2 text-white/70"><MapPin size={16} /> {institute.location}</div>
+            <div className="inline-flex items-start gap-2 text-white/70"><MapPin size={16} /> {institute.address}</div>
           </div>
           <div className="flex items-center gap-4 pt-4">
             <a href={institute.facebook} target="_blank" rel="noreferrer" className="text-white/70 transition hover:text-white"><Facebook size={20} /></a>
-            <a href={institute.youtube} target="_blank" rel="noreferrer" className="text-white/70 transition hover:text-white"><Youtube size={20} /></a>
+            <a href={institute.tiktok} target="_blank" rel="noreferrer" className="text-white/70 transition hover:text-white" aria-label="TikTok"><Music2 size={20} /></a>
           </div>
         </div>
 

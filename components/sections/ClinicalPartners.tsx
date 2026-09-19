@@ -33,7 +33,7 @@ export default function ClinicalPartners() {
                 </span>
               ) : null}
               <h3 className="mt-4 text-2xl font-semibold text-navy">{hospital.name}</h3>
-              {hospital.fullName ? <p className="mt-1 text-sm text-ink-muted">{hospital.fullName}</p> : null}
+              {hospital.title ? <p className="mt-2 text-sm font-semibold text-crimson">{hospital.title}</p> : null}
               <p className="mt-5 text-sm leading-7 text-ink-muted">{hospital.desc}</p>
             </StaggerItem>
           ))}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X, MessageCircle, Phone, Mail, Clock, ChevronDown } from "lucide-react";
+import { institute } from "@/lib/data";
 
 const navLinks = [
   { label: "About",      href: "/about", children: [
@@ -29,6 +30,9 @@ const navLinks = [
   { label: "Contact",    href: "/contact" },
 ];
 
+const primaryNavLinks = navLinks.slice(0, 6);
+const secondaryNavLinks = navLinks.slice(6);
+
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const reduced = useReducedMotion();
@@ -40,11 +44,11 @@ export default function Nav() {
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-10">
             <span className="flex items-center gap-2">
               <Phone size={12} className="opacity-70" />
-              0312 3421447
+              {institute.phone}
             </span>
             <span className="flex items-center gap-2">
               <Mail size={12} className="opacity-70" />
-              info@imaminstitute.edu.pk
+              {institute.email}
             </span>
             <span className="flex items-center gap-2">
               <Clock size={12} className="opacity-70" />
@@ -66,8 +70,8 @@ export default function Nav() {
               />
             </Link>
 
-            <nav className="hidden md:flex items-center gap-3 xl:gap-4">
-              {navLinks.map((link) => (
+            <nav className="hidden min-w-0 flex-1 items-center justify-end gap-3 md:flex xl:gap-4">
+              {primaryNavLinks.map((link) => (
                 <div key={link.href} className="group relative">
                   <Link href={link.href} className="flex items-center gap-1 whitespace-nowrap text-xs font-medium text-ink transition-colors hover:text-navy xl:text-sm">
                     {link.label}
@@ -84,11 +88,24 @@ export default function Nav() {
                   )}
                 </div>
               ))}
+              <div className="group relative">
+                <button type="button" className="flex items-center gap-1 whitespace-nowrap text-xs font-medium text-ink transition-colors hover:text-navy xl:text-sm">
+                  More
+                  <ChevronDown size={13} aria-hidden="true" />
+                </button>
+                <div className="invisible absolute right-0 top-full z-50 w-64 translate-y-2 rounded-md border border-border bg-white p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  {secondaryNavLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="block rounded px-3 py-2 text-sm text-ink transition hover:bg-navy-light hover:text-navy">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
               <a
-                href="https://wa.me/923123421447"
+                href="https://wa.me/923002320085"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-105 transition-transform"
@@ -150,7 +167,7 @@ export default function Nav() {
               ))}
               <div className="mt-6 flex flex-col gap-3">
                 <a
-                  href="https://wa.me/923123421447"
+                  href="https://wa.me/923002320085"
                   className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold py-3 rounded"
                 >
                   <MessageCircle size={18} /> WhatsApp Us

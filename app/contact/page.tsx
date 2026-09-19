@@ -36,7 +36,7 @@ export default function ContactPage() {
                 <MapPin size={20} className="text-crimson" />
                 <div>
                   <p className="font-semibold text-navy">Location</p>
-                  <p className="text-sm text-ink-muted">{institute.location}</p>
+                  <p className="text-sm text-ink-muted">{institute.address}</p>
                 </div>
               </div>
             </div>

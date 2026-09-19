@@ -50,7 +50,7 @@ export default function Programs() {
           {futurePrograms.map((program, index) => (
             <StaggerItem key={program.slug} className="rounded-[1.5rem] bg-navy-light p-6 transition card-shadow-hover">
               <div className="flex items-center justify-between gap-3">
-                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">Coming Soon</span>
+                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">Admissions Open</span>
                 <span className="text-sm font-medium text-ink-muted">{program.department}</span>
               </div>
               <h3 className="mt-6 text-xl font-semibold text-navy">{program.name}</h3>

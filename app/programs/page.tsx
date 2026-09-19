@@ -13,7 +13,7 @@ export default function ProgramsPage() {
         <div className="mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">Academic Programs</p>
           <h1 className="mt-4 text-5xl font-semibold tracking-[-0.03em] text-navy text-display">Programs at Imam Institute</h1>
-          <p className="mt-4 max-w-3xl text-base leading-8 text-ink-muted">Browse our flagship BS Nursing program and the allied health pathways launching soon.</p>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-ink-muted">Explore professional paramedical programs designed to build practical skills for healthcare careers.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -21,18 +21,12 @@ export default function ProgramsPage() {
             <div key={program.slug} className="rounded-[1.75rem] border border-border bg-navy-light p-8">
               <div className="flex items-center justify-between gap-4">
                 <span className="text-xl font-semibold text-navy">{program.name}</span>
-                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">{program.status === "active" ? "Active" : "Coming Soon"}</span>
+                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">Admissions Open</span>
               </div>
               <p className="mt-4 text-sm leading-7 text-ink-muted">{program.description}</p>
               <div className="mt-5 flex items-center justify-between gap-4 text-sm text-ink-muted">
                 <span>{program.duration}</span>
-                {program.status === "active" ? (
-                  <Link href={`/programs/${program.slug}`} className="text-crimson font-semibold transition hover:text-crimson-dark">
-                    Learn More →
-                  </Link>
-                ) : (
-                  <span className="text-ink-muted">Notify Me</span>
-                )}
+                <Link href="/admissions/apply" className="text-crimson font-semibold transition hover:text-crimson-dark">Apply Now →</Link>
               </div>
             </div>
           ))}

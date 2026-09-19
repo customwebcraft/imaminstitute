@@ -1,8 +1,8 @@
 "use client";
 
-import { Award, BadgeCheck, Banknote, Building2, Briefcase, Coins, FlaskConical, GraduationCap, Hospital, Medal, Monitor, Trophy, TrendingUp, Users } from "lucide-react";
+import { Award, Building2, Briefcase, Coins, FlaskConical, GraduationCap, Hospital, Medal, Monitor, TrendingUp, Users } from "lucide-react";
 import { StaggerGrid, StaggerItem } from "@/components/motion/StaggerGrid";
-import { whyUs } from "@/lib/data";
+import { whyUs, whyUsClosing } from "@/lib/data";
 
 const iconMap = {
   GraduationCap,
@@ -42,6 +42,7 @@ export default function WhyUs() {
             );
           })}
         </StaggerGrid>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-base font-semibold leading-7 text-navy">{whyUsClosing}</p>
       </div>
     </section>
   );

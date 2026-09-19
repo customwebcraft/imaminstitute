@@ -2,6 +2,13 @@ import Image from "next/image";
 
 const announcements = [
   {
+    image: "/images/announcements/announcement-6.jpg",
+    date: "Admissions Open",
+    category: "Featured",
+    title: "Admissions Highlighted for 2026",
+    description: "Applications are open for students ready to begin a career in nursing and healthcare.",
+  },
+  {
     image: "/images/announcements/announcement-1.jpg",
     date: "Student Welcome",
     category: "Orientation",
