@@ -67,14 +67,6 @@ export default function GalleryExperience({ mode = "all" }: { mode?: "all" | "ca
         </div>
       </section>}
 
-      {(mode === "all" || mode === "media") && <section className="!py-0" aria-labelledby="video-heading">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">Watch and explore</p>
-        <h2 id="video-heading" className="mt-3 text-4xl font-semibold text-navy text-display">Imam Institute in motion</h2>
-        <video className="mt-8 aspect-video w-full rounded-[1.75rem] bg-navy object-cover" controls preload="metadata" aria-label="Imam Institute campus video">
-          <source src="/videos/imam-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section>}
     </div>
   );
 }

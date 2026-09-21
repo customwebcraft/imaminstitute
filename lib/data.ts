@@ -36,6 +36,7 @@ export const stats = [
 export const accreditations = [
   { label: "Registered with PNMC", logo: "/logos/pnmc.png" },
   { label: "Affiliated with SMBBMU", logo: "/logos/smbbmu.png" },
+  { label: "Affiliated with Sindh Medical Faculty (SMF), Karachi", logo: "/logos/smf.png" },
   { label: "Approved by Govt. of Sindh", logo: "/logos/sindh-govt.png" },
   { label: "Imam Institute Certified", logo: "/logos/imam-cert.png" },
 ];
@@ -114,7 +115,6 @@ export const programs = [
     department: "Paramedical Sciences",
     duration: "1 Year Diploma",
     status: "active",
-    featured: false,
     description: "Learn the foundational laboratory and clinical support skills used in modern dental services.",
     accreditation: "Nationally Recognized",
   },
@@ -208,24 +208,6 @@ export const hospitals = [
 
 export const facultyMembers: FacultyMember[] = [
   {
-    id: "zahid-hussain-soomro",
-    name: "Sir Zahid Hussain Soomro",
-    role: "Director",
-    department: "leadership",
-    photo: "/images/faculty/clg-director.jpg",
-    quote: "At Imam Institute, we are committed to providing quality nursing education, practical clinical training, and a supportive learning environment that empowers our students to become skilled, confident, and compassionate healthcare professionals.",
-    message: `At Imam Institute, we are committed to providing quality nursing education, practical clinical training, and a supportive learning environment that empowers our students to become skilled, confident, and compassionate healthcare professionals.`,
-  },
-  {
-    id: "vinod-kumar",
-    name: "Sir Vinod Kumar",
-    role: "Principal",
-    department: "leadership",
-    photo: "/images/faculty/clg-principal.jpg",
-    quote: "Education is the foundation of professional excellence. Our aim is to nurture our students through quality education, discipline, practical learning, and professional development, preparing them to serve the healthcare community with knowledge, confidence, and compassion.",
-    message: `Education is the foundation of professional excellence. Our aim is to nurture our students through quality education, discipline, practical learning, and professional development, preparing them to serve the healthcare community with knowledge, confidence, and compassion.`,
-  },
-  {
     id: "abid-hussain-soomro",
     name: "Mr. Abid Hussain Soomro",
     role: "Chief Executive Officer",
@@ -237,6 +219,23 @@ export const facultyMembers: FacultyMember[] = [
 We believe that every aspiring healthcare professional deserves the opportunity to learn, grow, and succeed. Through quality education and clinical training, we are proud to shape the next generation of competent and caring nurses who will contribute to a healthier Pakistan.`,
   },
   {
+    id: "zahid-hussain-soomro",
+    name: "Sir Zahid Hussain Soomro",
+    role: "Director",
+    department: "leadership",
+    photo: "/images/faculty/clg-director.jpg",
+    quote: "At Imam Institute, we are committed to providing quality nursing education, practical clinical training, and a supportive learning environment that empowers our students to become skilled, confident, and compassionate healthcare professionals.",
+    message: `At Imam Institute, we are committed to providing quality nursing education, practical clinical training, and a supportive learning environment that empowers our students to become skilled, confident, and compassionate healthcare professionals.`,
+  },
+  {
+    id: "hamid-imam-soomro",
+    name: "Dr Hamid Imam Soomro",
+    role: "Head of Imam Medical Center",
+    department: "leadership",
+    photo: "/images/faculty/head.jpg",
+    quote: "Strong clinical partnerships help students turn knowledge into confident patient care.",
+  },
+  {
     id: "shahid-hussain-soomro",
     name: "Mr. Shahid Hussain Soomro",
     role: "Additional Director",
@@ -246,6 +245,23 @@ We believe that every aspiring healthcare professional deserves the opportunity 
     message: `At Imam Institute of Nursing & Allied Health Sciences we are dedicated to creating an environment where students can achieve academic excellence while developing the skills, confidence, and compassion required in the nursing profession. Our commitment is to provide quality education, modern clinical training, and continuous support that prepares every student for a successful healthcare career.
 
 We believe that today's students are tomorrow's healthcare leaders, and we remain committed to guiding them towards professional excellence and lifelong learning.`,
+  },
+  {
+    id: "tahir-hussain-soomro",
+    name: "Dr Tahir Hussain Soomro",
+    role: "Principal of Imam Paramedical Institute",
+    department: "leadership",
+    photo: "/images/faculty/principal.jpg",
+    quote: "Education is the foundation of professional excellence.",
+  },
+  {
+    id: "vinod-kumar",
+    name: "Sir Vinod Kumar",
+    role: "Principal",
+    department: "faculty",
+    photo: "/images/faculty/clg-principal.jpg",
+    quote: "Education is the foundation of professional excellence. Our aim is to nurture our students through quality education, discipline, practical learning, and professional development, preparing them to serve the healthcare community with knowledge, confidence, and compassion.",
+    message: `Education is the foundation of professional excellence. Our aim is to nurture our students through quality education, discipline, practical learning, and professional development, preparing them to serve the healthcare community with knowledge, confidence, and compassion.`,
   },
   {
     id: "zahid-abbasi",
@@ -325,6 +341,7 @@ export const trustBadges = [
   { label: "Government Approved", sublabel: "Govt. of Sindh", icon: "ShieldCheck", logo: "/logos/sindh-govt.png" },
   { label: "PNMC Registered", sublabel: "Pakistan Nursing Council", icon: "Award", logo: "/logos/pnmc.png" },
   { label: "SMBBMU Affiliated", sublabel: "University Affiliated", icon: "Building2", logo: "/logos/smbbmu.png" },
+  { label: "SMF Affiliated", sublabel: "Sindh Medical Faculty, Karachi", icon: "Building2", logo: "/logos/smf.png" },
 ];
 
 export const newsItems = [

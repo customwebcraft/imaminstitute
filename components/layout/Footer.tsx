@@ -86,7 +86,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-5 text-sm text-white/60">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 md:flex-row md:items-center md:justify-between md:px-10">
           <p>© 2026 Imam Institute of Nursing & Allied Health Sciences. All rights reserved.</p>
-          <p>PNMC · SMBBMU · Govt. of Sindh Approved</p>
+          <p>PNMC · SMBBMU · SMF Karachi · Govt. of Sindh Approved</p>
         </div>
       </div>
     </footer>

@@ -11,11 +11,13 @@ import Gallery from "@/components/sections/Gallery";
 import News from "@/components/sections/News";
 import AdmissionsCTA from "@/components/sections/AdmissionsCTA";
 import TrustBar from "@/components/sections/TrustBar";
+import WelcomeVideo from "@/components/layout/WelcomeVideo";
 
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <Hero />
+      <WelcomeVideo />
       <AccreditationBar />
       <About />
       <Stats />

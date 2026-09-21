@@ -176,6 +176,7 @@ export default function Hero() {
               {[
                 { label: "PNMC Registered" },
                 { label: "SMBBMU Affiliated" },
+                { label: "SMF Affiliated" },
                 { label: "Govt. Sindh Approved" },
               ].map((item) => (
                 <span
