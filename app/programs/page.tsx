@@ -35,18 +35,17 @@ export default function ProgramsPage() {
           ))}
         </div>
 
-        <h2 className="mb-6 mt-14 text-2xl font-semibold text-navy">Paramedical Programs · 1 Year Diplomas</h2>
+        <h2 className="mb-6 mt-14 text-2xl font-semibold text-navy">Pharmacy</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {[...programs.filter((program) => !program.featured), ...diplomaPrograms.map((program) => ({ ...program, department: "Paramedical Sciences", accreditation: "Career-focused training" }))].map((program) => (
+          {pharmacyPrograms.map((program) => (
             <div key={program.slug} className="rounded-[1.75rem] border border-border bg-navy-light p-8">
-              <div className="flex items-center justify-between gap-4">
-                <span className="text-xl font-semibold text-navy">{program.name}</span>
-                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">Admissions Open</span>
-              </div>
+              <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">{program.category}</span>
+              <h3 className="mt-5 text-xl font-semibold text-navy">{program.name}</h3>
               <p className="mt-4 text-sm leading-7 text-ink-muted">{program.description}</p>
-              <div className="mt-5 flex items-center justify-between gap-4 text-sm text-ink-muted">
-                <span>{program.duration}</span>
-                <Link href="/admissions/apply" className="text-crimson font-semibold transition hover:text-crimson-dark">Apply Now →</Link>
+              <div className="mt-5 space-y-2 text-sm text-ink-muted">
+                <p><span className="font-semibold text-ink">Duration:</span> {program.duration}</p>
+                <p><span className="font-semibold text-ink">Eligibility:</span> {program.eligibility}</p>
+                {program.requirements.map((requirement) => <p key={requirement}>• {requirement}</p>)}
               </div>
             </div>
           ))}
@@ -67,17 +66,18 @@ export default function ProgramsPage() {
           ))}
         </div>
 
-        <h2 className="mb-6 mt-14 text-2xl font-semibold text-navy">Pharmacy</h2>
+        <h2 className="mb-6 mt-14 text-2xl font-semibold text-navy">Paramedical Programs · 1 Year Diplomas</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {pharmacyPrograms.map((program) => (
+          {[...programs.filter((program) => !program.featured), ...diplomaPrograms.map((program) => ({ ...program, department: "Paramedical Sciences", accreditation: "Career-focused training" }))].map((program) => (
             <div key={program.slug} className="rounded-[1.75rem] border border-border bg-navy-light p-8">
-              <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">{program.category}</span>
-              <h3 className="mt-5 text-xl font-semibold text-navy">{program.name}</h3>
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-xl font-semibold text-navy">{program.name}</span>
+                <span className="rounded-full bg-crimson px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">Admissions Open</span>
+              </div>
               <p className="mt-4 text-sm leading-7 text-ink-muted">{program.description}</p>
-              <div className="mt-5 space-y-2 text-sm text-ink-muted">
-                <p><span className="font-semibold text-ink">Duration:</span> {program.duration}</p>
-                <p><span className="font-semibold text-ink">Eligibility:</span> {program.eligibility}</p>
-                {program.requirements.map((requirement) => <p key={requirement}>• {requirement}</p>)}
+              <div className="mt-5 flex items-center justify-between gap-4 text-sm text-ink-muted">
+                <span>{program.duration}</span>
+                <Link href="/admissions/apply" className="text-crimson font-semibold transition hover:text-crimson-dark">Apply Now →</Link>
               </div>
             </div>
           ))}

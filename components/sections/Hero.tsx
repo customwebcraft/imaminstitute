@@ -110,7 +110,7 @@ export default function Hero() {
           <div>
             {/* Eyebrow */}
             <motion.p
-              className="text-crimson text-xs font-semibold tracking-[0.2em] uppercase mb-6 flex items-center gap-3"
+              className="text-crimson text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-6 flex items-center gap-3"
               initial={reduced ? false : { opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease, delay: 0.1 }}

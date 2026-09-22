@@ -67,7 +67,7 @@ export const programs = [
     department: "Paramedical Sciences",
     duration: "1 Year Diploma",
     status: "active",
-    featured: true,
+    featured: false,
     description: "Build practical skills in diagnostic imaging, patient preparation, radiation safety, and X-ray equipment operation.",
     accreditation: "Nationally Recognized",
   },
@@ -261,7 +261,7 @@ export const hospitals = [
 export const facultyMembers: FacultyMember[] = [
   {
     id: "abid-hussain-soomro",
-    name: "Mr. Abid Hussain Soomro",
+    name: "Dr Abid Hussain Soomro",
     role: "Chief Executive Officer",
     department: "leadership",
     photo: "/images/faculty/ceo.jpg",
@@ -282,7 +282,7 @@ We believe that every aspiring healthcare professional deserves the opportunity 
   {
     id: "hamid-imam-soomro",
     name: "Dr Hamid Imam Soomro",
-    role: "Head of Imam Medical Center",
+    role: "Head of Imam Institute",
     department: "leadership",
     photo: "/images/faculty/head.jpg",
     quote: "Strong clinical partnerships help students turn knowledge into confident patient care.",
@@ -291,7 +291,7 @@ We believe that every aspiring healthcare professional deserves the opportunity 
     id: "shahid-hussain-soomro",
     name: "Mr. Shahid Hussain Soomro",
     role: "Additional Director",
-    department: "administration",
+    department: "leadership",
     photo: "/images/faculty/additional-director.jpg",
     quote: "Today's students are tomorrow's healthcare leaders.",
     message: `At Imam Institute of Nursing & Allied Health Sciences we are dedicated to creating an environment where students can achieve academic excellence while developing the skills, confidence, and compassion required in the nursing profession. Our commitment is to provide quality education, modern clinical training, and continuous support that prepares every student for a successful healthcare career.
@@ -301,10 +301,18 @@ We believe that today's students are tomorrow's healthcare leaders, and we remai
   {
     id: "tahir-hussain-soomro",
     name: "Dr Tahir Hussain Soomro",
-    role: "Principal of Imam Paramedical Institute",
+    role: "Principal of Pharmacy",
     department: "leadership",
     photo: "/images/faculty/principal.jpg",
     quote: "Education is the foundation of professional excellence.",
+  },
+  {
+    id: "shahid-hussain-soomro-admin",
+    name: "Mr. Shahid Hussain Soomro",
+    role: "Additional Director",
+    department: "administration",
+    photo: "/images/faculty/additional-director.jpg",
+    quote: "Today's students are tomorrow's healthcare leaders.",
   },
   {
     id: "vinod-kumar",
