@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Phone, AtSign, MapPin, Music2 } from "lucide-react";
-import { institute } from "@/lib/data";
+import { accreditations, institute } from "@/lib/data";
 
 const quickLinks = [
   { href: "/about", label: "About" },
@@ -34,6 +34,24 @@ const programs = [
 export default function Footer() {
   return (
     <footer className="bg-[#0A1A3D] text-white">
+      <section className="border-y border-border bg-white py-5 text-navy">
+        <div className="mx-auto flex max-w-7xl items-center px-6 md:px-10">
+          <div className="flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-4">
+            {accreditations.map((item) => (
+              <div key={item.label} className="inline-flex items-center gap-3">
+                <div className="relative flex h-9 w-20 items-center justify-center overflow-hidden grayscale transition hover:grayscale-0">
+                  {item.logo ? (
+                    <Image src={item.logo} alt={item.label} fill sizes="80px" className="object-contain" />
+                  ) : (
+                    <span className="text-xs font-bold uppercase tracking-wide">PNMC</span>
+                  )}
+                </div>
+                <span className="text-sm font-medium">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4 md:px-10">
         <div className="space-y-5 md:col-span-2">
           <div className="flex items-center gap-3">
