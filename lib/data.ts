@@ -37,6 +37,8 @@ export const accreditations = [
   { label: "Registered with PNMC", logo: "/logos/pnmc.png" },
   { label: "Affiliated with SMBBMU", logo: "/logos/smbbmu.png" },
   { label: "Affiliated with Sindh Medical Faculty (SMF), Karachi", logo: "/logos/smf.png" },
+  { label: "Affiliated with Sindh Technical Education & Vocational Training Authority (STEVTA)", logo: "/logos/stevta.png" },
+  { label: "Affiliated with Pharmacy Council", logo: "/logos/pharmacy.png" },
   { label: "Approved by Govt. of Sindh", logo: "/logos/sindh-govt.png" },
   { label: "Imam Institute Certified", logo: "/logos/imam-cert.png" },
 ];
@@ -156,6 +158,56 @@ export const upcomingPrograms = [
   { slug: "cna", name: "Certified Nursing Assistant (CNA)", department: "Department of Nursing", duration: "Coming Soon", description: "A future entry pathway for foundational patient-care and nursing support skills." },
 ];
 
+export const pharmacyPrograms = [
+  {
+    slug: "pharmacy-technician",
+    name: "Pharmacy Technician",
+    department: "Pharmacy",
+    duration: "2 Years",
+    category: "Category-B / Register-B",
+    eligibility: "Matriculation (Science) from a recognized Board of Pakistan",
+    description: "Professional pharmacy education focused on medicines, pharmaceutical sciences, dispensing practices, and safe medication management to prepare students for careers in healthcare and pharmaceutical services.",
+    requirements: [
+      "Candidates must fulfill the requirements of the relevant Pharmacy Council.",
+      "Admission is subject to availability of seats and applicable regulatory requirements.",
+    ],
+  },
+];
+
+export const postBasicSpecializations = [
+  {
+    slug: "post-basic-cardiac-care",
+    name: "Post Basic Specialization in Cardiac Care (CCU)",
+    duration: "1 Year",
+    eligibility: "BS Nursing / General Nursing*",
+    description: "An advanced nursing specialization designed to strengthen knowledge and clinical skills for safe, evidence-based care of patients in cardiac and coronary care units.",
+  },
+  {
+    slug: "post-basic-pediatric-nursing",
+    name: "Post Basic Specialization in Pediatric Nursing (Peads)",
+    duration: "1 Year",
+    eligibility: "BS Nursing / General Nursing*",
+    description: "An advanced nursing specialization focused on compassionate, age-appropriate, and clinically competent care for infants, children, and adolescents.",
+  },
+];
+
+export const diplomaPrograms = [
+  { slug: "dispenser", name: "Dispenser", duration: "1 Year Diploma", description: "Practical training in dispensing support, prescription handling, medicine storage, and safe patient service." },
+  { slug: "lab-technician", name: "Lab Technician", duration: "1 Year Diploma", description: "Develop foundational skills in laboratory procedures, sample handling, diagnostic support, and laboratory safety." },
+  { slug: "respiratory-technician", name: "Respiratory Technician", duration: "1 Year Diploma", description: "Build practical knowledge of respiratory care equipment, patient support, and clinical assistance in respiratory services." },
+  { slug: "ultrasound-technician", name: "Ultrasound Technician", duration: "1 Year Diploma", description: "Learn the fundamentals of ultrasound imaging, patient preparation, equipment handling, and diagnostic support." },
+  { slug: "ct-scan-technician", name: "CT Scan Technician", duration: "1 Year Diploma", description: "Gain foundational skills in CT imaging support, patient preparation, radiation safety, and scan-room procedures." },
+];
+
+export const vocationalPrograms = [
+  { name: "Computer Graphic Designing", duration: "3–6 Months", eligibility: "Matric / Intermediate", description: "Career-oriented training in visual communication, digital design tools, and practical graphic design projects." },
+  { name: "Web Designing & Development", duration: "3–6 Months", eligibility: "Matric / Intermediate", description: "Practical training in website design, front-end development, responsive layouts, and digital project building." },
+  { name: "Computer Applications / IT", duration: "3–6 Months", eligibility: "Matric", description: "Foundational computer and information technology skills for education, office work, and everyday professional use." },
+  { name: "Graphic Designing", duration: "Career Skill Course", eligibility: "Open to eligible applicants", description: "Hands-on skill development in creative design, digital composition, and professional visual content." },
+  { name: "AutoCAD", duration: "Career Skill Course", eligibility: "Open to eligible applicants", description: "Technical drawing and computer-aided design training for practical drafting and design work." },
+  { name: "CIT", duration: "Career Skill Course", eligibility: "Open to eligible applicants", description: "Computer information technology training focused on essential digital and office productivity skills." },
+];
+
 export const whyUs = [
   { icon: "GraduationCap", title: "Quality Nursing Education", desc: "Quality nursing education that combines strong academic foundations with practical clinical learning." },
   { icon: "Hospital", title: "Strong Clinical Training", desc: "Hands-on clinical exposure through Imam Medical Center, JIMS Hospital, and Civil Hospital Jacobabad builds confidence and patient-care skills." },
@@ -239,7 +291,7 @@ We believe that every aspiring healthcare professional deserves the opportunity 
     id: "shahid-hussain-soomro",
     name: "Mr. Shahid Hussain Soomro",
     role: "Additional Director",
-    department: "leadership",
+    department: "administration",
     photo: "/images/faculty/additional-director.jpg",
     quote: "Today's students are tomorrow's healthcare leaders.",
     message: `At Imam Institute of Nursing & Allied Health Sciences we are dedicated to creating an environment where students can achieve academic excellence while developing the skills, confidence, and compassion required in the nursing profession. Our commitment is to provide quality education, modern clinical training, and continuous support that prepares every student for a successful healthcare career.
@@ -323,7 +375,7 @@ We believe that today's students are tomorrow's healthcare leaders, and we remai
     id: "ali-nawaz-hisbani",
     name: "Mr. Ali Nawaz Hisbani",
     role: "Vice Principal",
-    department: "administration",
+    department: "faculty",
     photo: "/images/faculty/vice-principal.jpg",
     quote: "A well-managed institute creates space for great learning.",
   },

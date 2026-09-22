@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GalleryExperience from "@/components/gallery/GalleryExperience";
 
-const galleryImages = Array.from({ length: 10 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
+const galleryImages = Array.from({ length: 16 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
 
 export const metadata = {
   title: "Gallery | Imam Institute",

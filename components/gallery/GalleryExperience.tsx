@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const galleryImages = Array.from({ length: 10 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
+const galleryImages = Array.from({ length: 16 }, (_, index) => `/images/gallery/gallery-${index + 1}.jpg`);
 const announcements = Array.from({ length: 6 }, (_, index) => `/images/announcements/announcement-${index + 1}.jpg`);
 
 export default function GalleryExperience({ mode = "all" }: { mode?: "all" | "carousel" | "media" }) {
