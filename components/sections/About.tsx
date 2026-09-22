@@ -20,7 +20,7 @@ export default function About() {
           </FadeUp>
 
           <div className="grid gap-4 pt-6 sm:grid-cols-3">
-            {accreditations.slice(0, 3).map((item) => (
+            {accreditations.map((item) => (
               <div key={item.label} className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-border">
                 <div className="relative h-12 w-12 overflow-hidden">
                   <Image src={item.logo} alt={item.label} fill sizes="48px" className="object-contain" />

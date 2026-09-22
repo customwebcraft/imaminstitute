@@ -10,9 +10,9 @@ export default function TrustBar() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gold">Fully Accredited & Verified</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em] text-white text-display">Recognized by Every Major Authority</h2>
         </div>
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-6 md:flex-row">
+        <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trustBadges.map((badge) => (
-            <div key={badge.label} className="relative w-full flex-shrink-0 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-center md:w-72">
+            <div key={badge.label} className="relative w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-center">
               <div className="absolute right-4 top-4 text-gold opacity-80">
                 <ShieldCheck size={20} />
               </div>

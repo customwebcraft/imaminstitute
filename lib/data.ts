@@ -402,6 +402,9 @@ export const trustBadges = [
   { label: "PNMC Registered", sublabel: "Pakistan Nursing Council", icon: "Award", logo: "/logos/pnmc.png" },
   { label: "SMBBMU Affiliated", sublabel: "University Affiliated", icon: "Building2", logo: "/logos/smbbmu.png" },
   { label: "SMF Affiliated", sublabel: "Sindh Medical Faculty, Karachi", icon: "Building2", logo: "/logos/smf.png" },
+  { label: "STEVTA Affiliated", sublabel: "Sindh Technical Education & Vocational Training Authority", icon: "Building2", logo: "/logos/stevta.png" },
+  { label: "Pharmacy Council Affiliated", sublabel: "Pharmacy Council", icon: "Building2", logo: "/logos/pharmacy.png" },
+  { label: "Imam Institute Certified", sublabel: "Institute Certification", icon: "Award", logo: "/logos/imam-cert.png" },
 ];
 
 export const newsItems = [

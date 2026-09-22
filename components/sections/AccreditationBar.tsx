@@ -2,7 +2,7 @@ import Image from "next/image";
 import { accreditations } from "@/lib/data";
 
 export default function AccreditationBar() {
-  const marqueeItems = [...accreditations.filter((item) => item.label !== "Imam Institute Certified"), ...accreditations.filter((item) => item.label !== "Imam Institute Certified")];
+  const marqueeItems = [...accreditations, ...accreditations];
 
   return (
     <section className="border-y border-border bg-white/80 py-5">
