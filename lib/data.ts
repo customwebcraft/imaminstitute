@@ -301,9 +301,9 @@ We believe that today's students are tomorrow's healthcare leaders, and we remai
   {
     id: "tahir-hussain-soomro",
     name: "Dr Tahir Hussain Soomro",
-    role: "Principal of Pharmacy",
+    role: "Principal - Pharmacy Department",
     department: "leadership",
-    photo: "/images/faculty/principal.jpg",
+    photo: "/images/faculty/principal-pharmacy.jpg",
     quote: "Education is the foundation of professional excellence.",
   },
   {
