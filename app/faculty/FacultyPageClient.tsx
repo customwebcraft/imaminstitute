@@ -17,7 +17,18 @@ export default function FacultyPageClient() {
   const [activeTab, setActiveTab] = useState<Tab>("leadership");
   const [selected, setSelected] = useState<FacultyMember | null>(null);
 
-  const filtered = facultyMembers.filter((member) => member.department === activeTab);
+  const filtered = facultyMembers
+    .filter((member) => member.department === activeTab)
+    .sort((firstMember, secondMember) => {
+      if (activeTab !== "faculty") return 0;
+
+      const roleOrder: Record<string, number> = {
+        Principal: 0,
+        "Vice Principal": 1,
+      };
+
+      return (roleOrder[firstMember.role] ?? 2) - (roleOrder[secondMember.role] ?? 2);
+    });
 
   return (
     <main className="min-h-screen bg-off-white">
