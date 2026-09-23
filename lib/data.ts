@@ -40,7 +40,7 @@ export const accreditations = [
   { label: "Affiliated with Sindh Technical Education & Vocational Training Authority (STEVTA)", logo: "/logos/stevta.png" },
   { label: "Affiliated with Pharmacy Council", logo: "/logos/pharmacy.png" },
   { label: "Approved by Govt. of Sindh", logo: "/logos/sindh-govt.png" },
-  { label: "Imam Institute Certified", logo: "/logos/imam-cert.png" },
+  { label: "Imam Institute Certified", logo: "/logos/imam-logo.png" },
 ];
 
 export const about = {
@@ -300,10 +300,18 @@ We believe that today's students are tomorrow's healthcare leaders, and we remai
   },
   {
     id: "tahir-hussain-soomro",
-    name: "Dr Tahir Hussain Soomro",
+    name: "Dr Fayaz Hussain Soomro",
     role: "Principal - Pharmacy Department",
     department: "leadership",
     photo: "/images/faculty/principal-pharmacy.jpg",
+    quote: "Education is the foundation of professional excellence.",
+  },
+  {
+    id: "tahir-hussain-soomro-paramedical",
+    name: "Dr Tahir Hussain Soomro",
+    role: "Principal - Imam Paramedical Institute",
+    department: "leadership",
+    photo: "/images/faculty/principal.jpg",
     quote: "Education is the foundation of professional excellence.",
   },
   {
@@ -404,7 +412,7 @@ export const trustBadges = [
   { label: "SMF Affiliated", sublabel: "Sindh Medical Faculty, Karachi", icon: "Building2", logo: "/logos/smf.png" },
   { label: "STEVTA Affiliated", sublabel: "Sindh Technical Education & Vocational Training Authority", icon: "Building2", logo: "/logos/stevta.png" },
   { label: "Pharmacy Council Affiliated", sublabel: "Pharmacy Council", icon: "Building2", logo: "/logos/pharmacy.png" },
-  { label: "Imam Institute Certified", sublabel: "Institute Certification", icon: "Award", logo: "/logos/imam-cert.png" },
+  { label: "Imam Institute Certified", sublabel: "Institute Certification", icon: "Award", logo: "/logos/imam-logo.png" },
 ];
 
 export const newsItems = [
