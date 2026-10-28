@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { playfair, dmSans } from "@/lib/fonts";
 import "./globals.css";
 
 import Nav from "@/components/layout/Nav";
@@ -33,8 +32,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}>
-      <body suppressHydrationWarning className={`${playfair.variable} ${dmSans.variable} font-dm antialiased bg-white text-ink`}>
+    <html lang="en" className="h-full antialiased">
+      <body suppressHydrationWarning className="font-dm antialiased bg-white text-ink">
         <Nav />
         <ScrollManager />
         <main className="relative overflow-hidden">{children}</main>

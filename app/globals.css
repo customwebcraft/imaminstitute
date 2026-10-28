@@ -17,8 +17,8 @@
   --color-border:      #E5E7EB;
   --color-white:       #FFFFFF;
 
-  --font-playfair: "var(--font-playfair)", Georgia, serif;
-  --font-dm-sans: "var(--font-dm-sans)", system-ui, sans-serif;
+  --font-playfair: Georgia, "Times New Roman", serif;
+  --font-dm-sans: Arial, Helvetica, sans-serif;
 
   --radius: 0.5rem;
   --radius-sm: 0.25rem;
