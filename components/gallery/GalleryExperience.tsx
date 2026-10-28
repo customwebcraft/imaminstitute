@@ -28,9 +28,9 @@ export default function GalleryExperience({ mode = "all" }: { mode?: "all" | "ca
       <section className="!py-0" aria-labelledby="gallery-video-heading">
         <div className="grid items-center gap-8 overflow-hidden rounded-[1.75rem] bg-navy px-6 py-8 text-white md:grid-cols-[0.7fr_1.3fr] md:px-10 md:py-10">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">Featured video</p>
-            <h2 id="gallery-video-heading" className="mt-3 text-4xl font-semibold text-display">Experience Imam Institute</h2>
-            <p className="mt-4 max-w-md text-base leading-8 text-white/70">See our campus, events, and learning community in motion.</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-crimson">Featured event</p>
+            <h2 id="gallery-video-heading" className="mt-3 text-4xl font-semibold text-display">Watch our 2nd Nursing Seminar in motion</h2>
+            <p className="mt-4 max-w-md text-base leading-8 text-white/70">Take a look at the learning, collaboration, and community that made this seminar special.</p>
           </div>
           <video className="aspect-video w-full rounded-[1.25rem] bg-black object-cover" controls playsInline preload="metadata" aria-label="Imam Institute event video">
             <source src="/videos/Event.mp4" type="video/mp4" />
