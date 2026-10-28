@@ -2,11 +2,12 @@ import { notFound } from "next/navigation";
 import { newsItems } from "@/lib/data";
 
 interface Params {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export function generateMetadata({ params }: Params) {
-  const article = newsItems.find((item) => item.href.endsWith(params.slug));
+export async function generateMetadata({ params }: Params) {
+  const { slug } = await params;
+  const article = newsItems.find((item) => item.href.endsWith(slug));
   if (!article) {
     return { title: "News | Imam Institute" };
   }
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: Params) {
   };
 }
 
-export default function NewsArticlePage({ params }: Params) {
-  const article = newsItems.find((item) => item.href.endsWith(params.slug));
+export default async function NewsArticlePage({ params }: Params) {
+  const { slug } = await params;
+  const article = newsItems.find((item) => item.href.endsWith(slug));
   if (!article) {
     notFound();
   }
